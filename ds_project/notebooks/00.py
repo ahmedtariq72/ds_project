@@ -15,4 +15,18 @@ raw_df.shape
 #print(raw_df.sample(1))    --clear comment
 
 # Get stats for the numerical column
- print(raw_df.describe())
+
+# Get stats for the numerical column
+print (raw_df.info())
+
+#  Investigate the questionable objects columns
+questionable_cols = ['YearsCodePro', 'YearsCode']
+
+for col in questionable_cols: 
+    print(col)
+    print(raw_df[col].unique().tolist())
+    print('--------------------------')
+    print()
+    
+    
+    
